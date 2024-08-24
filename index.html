@@ -11,19 +11,13 @@
         <input type="password" id="password" placeholder="Enter Password">
         <button onclick="checkPassword()">Submit</button>
     </div>
-    
-
     <div class="content" id="content" style="display: none;">
-
         <h1>Welcome to the protected content!</h1>
 
         <div class="login-container">
-
-            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                <strong>Thank You!</strong> Please SUBMIT,messege in send.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="alert alert-succes d-none my-alert" role="alert">
+                THANK YOU—GOOD ROBOT!
               </div>
-
             <form name="programing" class="login-form">
                 <div class="input-group">
                     <label for="email">Email</label>
@@ -37,23 +31,16 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" name="password" required>
                 </div>
-                <div>
-                    <select name="" id="">
-                        <option value="" selected> TENTUKAN PILIHAN</option>
-                        <option value="">SIPD RI</option>
-                        <option value="">MENPAN RI</option>
-                    </select>
-                </div>
-                <br>
-                <button type="submit" id="submitBtn" class="btn btn-primary btn-kirim">SUBMIT</button>
-
+                <button type="submit" id="submitBtn" class="login btn btn-primary btn-kirim d-none">Login</button>
+                <button class="btn btn-primary btn-loading" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                <span role="status">Loading...</span></button>
+        
                 
-                <p id="error-message" class="error-message"></p>
-                <p id="success-message" class="success-message"></p>
-                <p id="loading-message" class="loading-message" style="display: none;">Submitting...</p>
      </form>
         </div>
     
+
     </div>
     <script>
       function checkPassword() {
@@ -67,31 +54,21 @@
         alert('Incorrect password');
     }
 }
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx2-ITt5b7Y9puSf4Qt7O4rHiOxKUbqxEPghv8sYexASW7G936knvANCc_PCkstW6j8/exec' ;
   const form = document.forms['programing'];
-  const btnKirim = document.querySelector('.btn-kirim');
-  const btnLoading = document.querySelector('.btn-loading'); 
-  const myAlert = document.querySelector('.my-alert');
-
   form.addEventListener('submit', e => {
-    e.preventDefault() ;
-    //ketika tombol submit diklil //
-    //tampilkan tombol loading
-    //hilangykan tombol kirim//
-    btnLoading.classList.toggle('d-none');
-    btnKirim.classList.toggle('d-none');
+    e.preventDefault();{
+  } 
+  //dah klik submit nnti muncul succes
+  {
+    alert('succes');
+  }
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-
-        myAlert.classList.toggle('d-none');
+        ///reset//
         form.reset();
-
-
-        console.log('Success!', response)
-    })
+        console.log('Success!', response)})
       .catch(error => console.error('Error!', error.message))
   })
 </script>
