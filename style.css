@@ -63,7 +63,7 @@ body {
     border-radius: 4px;
 }
 
-button {
+.login {
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -73,7 +73,7 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+.login:hover {
     background-color: #0056b3;
 }
 .error-message {
@@ -91,8 +91,16 @@ button:hover {
 }
 
 .loading-message {
-    color: #007bff;
+    color: greenyellow;
     font-size: 14px;
     text-align: center;
     margin-top: 10px;
+}
+.btn-loading{
+    display: none;
+    
+}
+.alert-succes{
+    color: green;
+    display: none;
 }
