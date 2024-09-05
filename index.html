@@ -6,14 +6,6 @@
     <title>Locked Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locked Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <div class="container" id="loginContainer">
         <input type="password" id="password" placeholder="Enter Password">
@@ -21,6 +13,8 @@
     </div>
     <div class="content" id="content" style="display: none;">
         <h1>Welcome to the protected content!</h1>
+        <p id="currentTime"></p>
+        <script src="jam.js"></script>
         <div class="login-container">
             <div class="alert alert-succes d-none my-alert" role="alert">
                 THANK YOU—GOOD ROBOT!
@@ -94,3 +88,5 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbx2-ITt5b7Y9puSf4Qt7O
 
   
 </script>
+</body>
+</html>
