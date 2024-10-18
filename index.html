@@ -21,30 +21,28 @@
               </div>
               
             <form name="programing" class="login-form">
+                
                 <div class="input-group">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" placeholder="Email" required>
+                    <label for="Nama">Nama</label>
+                    <input type="text" id="Nama" name="nama" required placeholder="Nama">
                 </div>
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" name="password" required>
-                </div>
+
                 <div class="input-group">
                     <label for="NIK">NIK</label>
                     <input type="number" id="NIK" name="NIK" required>
                 </div>
+                
                 <div class="input-group">
-                  <label for="alamat">ALAMAT</label>
-                  <input type="text" id="alamat" name="alamat" required placeholder="alamat">
+                  <label for="Alamat">Alamat</label>
+                  <input type="text" id="Alamat" name="Alamat" required placeholder="alamat">
               </div>
+
                 <div class="input-group">
-                    <label for="file">KTP</label>
-                    <input type="file" id="file" name="foto ktp" required>
+                    <label for="Kelurahan">RT,Kelurahan</label>
+                    <input type="text" id="Kelurahan" name="Kelurahan" placeholder="Kelurahan,rt">
                 </div>
+
+                
                 <button type="submit" id="submitBtn" class="login btn btn-primary btn-kirim d-none">Login</button>
                 <button class="btn btn-primary btn-loading" type="button" disabled>
                     <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
@@ -59,7 +57,7 @@
     <script>
       function checkPassword() {
     const password = document.getElementById('password').value;
-    const correctPassword = 'ArjunGanteng'; // Set your password here
+    const correctPassword = '3'; // Set your password here
 
     if (password === correctPassword) {
         document.getElementById('loginContainer').style.display = 'none';
